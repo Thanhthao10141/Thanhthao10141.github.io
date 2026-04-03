@@ -1,0 +1,118 @@
+/* 1. Import Fonts */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+/* Bạn cũng cần import font Roboto nếu chưa có */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* 2. Cấu hình Body */
+body {
+    font-family: Roboto, sans-serif;
+    background: #e2d7aa;
+    color: #000000;
+    font-size: 16px;
+    width: 1180px;
+    line-height: 24px;
+    margin: 0 auto;
+}
+
+/* 3. Ảnh Header (img-container) */
+body > div.img-container {
+    width: 1600px; /* Lưu ý: width này lớn hơn body, có thể gây cuộn ngang nếu không căn chỉnh */
+    height: 450px;
+    margin-top: 65px;
+}
+
+body > div.img-container > img {
+    width: 1100px;
+    height: 450px;
+}
+
+/* 4. Tiêu đề H1 */
+h1 {
+    font-size: 60px;
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 65px;
+}
+
+/* 5. Thanh điều hướng (Navigation) */
+nav {
+    margin: 30px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #000000;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 0 12px 0 12px;
+}
+
+/* Định dạng đặc biệt cho link đầu và cuối trong menu */
+nav ul li:first-of-type a,
+nav ul li:last-of-type a {
+    padding-left: 0;
+    color: #0a2d4a;
+    font-weight: bold;
+}
+
+/* 6. Bố cục các bài viết (Articles) */
+main {
+    margin-top: 30px;
+}
+
+article {
+    width: 370px;
+    display: inline-block;
+    vertical-align: top; /* Giúp các cột thẳng hàng ở phía trên */
+}
+
+main > article img {
+    width: 350px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+p {
+    width: 345px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* 7. Hiệu ứng chữ cái đầu tiên (Drop Cap) */
+article img + p:first-letter {
+    font-family: EucrosiaUPC, sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* 8. Nút bấm Read More và Comments */
+.readmore a, .comments a {
+    background: url('images/bg2.jpg'); /* Đảm bảo bạn có file ảnh này */
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Thêm icon trước link comment */
+article p:last-of-type span:first-of-type a::before {
+    content: url("images/comment.png");
+    position: relative;
+    padding: 10px;
+    right: 5px;
+    top: 7px;
+}
+
+/* 9. Chân trang (Footer) */
+footer {
+    margin: 0;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
