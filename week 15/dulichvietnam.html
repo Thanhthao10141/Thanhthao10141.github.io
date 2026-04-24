@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Du lịch Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Du lịch Việt Nam</h1>
+    <p>Khám phá vẻ đẹp đất nước</p>
+</header>
+
+<!-- DANH SÁCH TOUR -->
+<section class="tours">
+    <div class="tour">
+        <img src="images/hanoi.jpg">
+        <h3>Hà Nội 3N2Đ</h3>
+        <p>Giá: 3.000.000đ</p>
+        <button onclick="openForm('Hà Nội 3N2Đ')">Đăng ký</button>
+    </div>
+
+    <div class="tour">
+        <img src="images/danang.jpg">
+        <h3>Đà Nẵng 4N3Đ</h3>
+        <p>Giá: 5.000.000đ</p>
+        <button onclick="openForm('Đà Nẵng 4N3Đ')">Đăng ký</button>
+    </div>
+</section>
+
+<!-- FORM -->
+<div id="formPopup" class="form-popup">
+    <h2>Đăng ký tour</h2>
+    <input type="text" id="name" placeholder="Tên">
+    <input type="text" id="phone" placeholder="SĐT">
+    <input type="text" id="tourName" readonly>
+
+    <button onclick="submitForm()">Gửi</button>
+    <button onclick="closeForm()">Đóng</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
